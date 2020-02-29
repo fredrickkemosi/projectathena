@@ -1,0 +1,54 @@
+<!-- templates/account/signup.html -->
+{% extends 'mainapp/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% load socialaccount %}
+{% providers_media_js %}
+{% block content %}
+{% include 'mainapp/navbar.html' %}
+
+
+
+
+
+
+
+
+<br><br>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-3"></div>
+		<div class="col-sm-6">
+			<h2 class="text-center">Sign Up</h2>
+			<form method="post">
+			  {% csrf_token %}
+			  {{ form|crispy}}
+			  <br>
+			  <center><button type="submit" class="btn btn-success py-1 px-3">
+			  	<span style="text-transform: uppercase;font-size: 10px;letter-spacing: 2px;">Sign Up</span></button></center>
+			</form>
+		</div>
+		<div class="col-sm-3"></div>
+	</div>
+<br><br>
+		<!--<p class="text-center">or use:</p>-->
+		<!--<div class="row">-->
+
+			<!--<div class="col-sm-4"></div>-->
+			<!--<div class="col-sm-4">-->
+			<!--	<a class="text-center" href="{% provider_login_url 'google' method='oauth2' %}">-->
+			<!--		<img src="{% static 'img/google-dark.png' %}" class="img-fluid">-->
+
+			<!--	</a>-->
+			<!--</div>-->
+			<!--<div class="col-sm-2">
+				<a href="{% provider_login_url 'instagram' %}">
+					<img src="{% static 'img/sign-in-with-twitter-gray.png' %}" class="img-fluid">
+
+				</a>
+			</div>-->
+		<!--	<div class="col-sm-4"></div>-->
+		<!--</div>-->
+</div>
+<br><br>
+{% endblock content %}
