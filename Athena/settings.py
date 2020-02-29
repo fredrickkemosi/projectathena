@@ -25,7 +25,7 @@ SECRET_KEY = 'pt$bfh-%mhh$c6_l13w$1i%+kcc-i@wh6e*0rp5j+2q22oic7u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['projectathena.herokuapp.com', 'localhost']
 
 
 # Application definition
